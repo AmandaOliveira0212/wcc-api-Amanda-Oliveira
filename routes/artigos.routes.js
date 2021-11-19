@@ -1,6 +1,4 @@
 // rotas do sistema de atigos
-
-
 /*
     GET 
         -obter todos os artigos
@@ -16,3 +14,12 @@
     DELETE
         -deletar um artigo
 */
+
+module.exports = (app) => {
+    const artigosController = require("../controllers/artigos.controller");
+    let router = require("express").Router();
+
+    router.post("/", artigosController.create);
+
+    app.use("/artigos", router);
+}
