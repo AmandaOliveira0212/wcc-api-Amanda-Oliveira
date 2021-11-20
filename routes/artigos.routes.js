@@ -21,5 +21,12 @@ module.exports = (app) => {
 
     router.post("/", artigosController.create);
 
+    router.get("/", artigosController.findAll);
+
+    router.get("/findByPk", artigosController.findByPk);
+
+    router.get("/findOne", artigosController.findOne);
+
+
     app.use("/artigos", router);
 }
