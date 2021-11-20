@@ -27,6 +27,16 @@ module.exports = (app) => {
 
     router.get("/findOne", artigosController.findOne);
 
+    router.get("/findAllActive", artigosController.findAllActive)
 
+    router.put("/:id", artigosController.update)
+
+    router.put("/", artigosController.uptadeMany);
+
+    router.delete("/", artigosController.deleteAll);
+
+    router.delete("/:id", artigosController.delete)
+
+    
     app.use("/artigos", router);
 }

@@ -5,7 +5,8 @@ const { defaultValueSchemable } = require("sequelize/types/lib/utils");
 module.exports = (sequelizeDatabase, Sequelize) => {
     const Artigo = sequelizeDatabase.define("artigos", {
         titulo: {
-            type: Sequelize.STRING
+            type: Sequelize.STRING,
+            
         },
         descricao: {
             type: Sequelize.STRING,
@@ -14,7 +15,8 @@ module.exports = (sequelizeDatabase, Sequelize) => {
         },
         publicado: {
             type: Sequelize.BOOLEAN,
-            defaultValue: false
+            defaultValue: false,
+            
         }
     });
 
